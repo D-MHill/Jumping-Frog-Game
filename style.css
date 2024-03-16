@@ -1,0 +1,98 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.game-board{
+    width: 100%;
+    height: 500px;
+    border-bottom: 8px solid rgb(5, 60, 5);
+    margin: 0, auto;
+    position:relative;
+    overflow: hidden;
+    background:linear-gradient(#87ceeb, #E0F6FF)
+}
+
+.log{
+    position:absolute;
+    bottom: 0;
+    width: 110px;
+    animation: log-animation 4s infinite linear;
+    }
+
+.frog{
+    width: 90px;
+    position: absolute;
+    bottom: 0;
+}
+
+.grass {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 70px;
+    height: 60px;
+    background-size: contain;
+}
+
+.grass2 {
+    position: absolute;
+    bottom: 0;
+    right: 80px; 
+    width: 70px;
+    height: 60px;
+    background-size: contain;
+}
+
+
+.jump{
+    animation: jump 1s  ease-out;
+
+}
+
+.clouds{
+    width: 350px;
+    position: absolute;
+    animation: clouds-animation 15s infinite linear;
+}
+
+@keyframes log-animation{
+    from{
+        right: -80px;
+    }
+    to{
+        right: 100%;
+    }
+}
+
+@keyframes jump{
+    0%{
+        bottom: 0;
+    }
+    40%{ 
+        bottom: 190px;
+         
+    }
+    50%{
+        bottom: 190px;
+    }
+
+    60%{
+        bottom: 190px;
+    }
+    100%{
+        bottom: 0;
+    }
+}
+
+@keyframes clouds-animation {
+    
+    from{
+        right: 0;
+    }
+
+    to{
+        right: 100%;
+    }
+}
