@@ -1,5 +1,6 @@
 const frog = document.querySelector(".frog");
 const log = document.querySelector(".log");
+let score = 0;
 
 const Jump = () => {
     frog.classList.add("jump"); 
@@ -34,6 +35,9 @@ const loop = setInterval(() => {
             
         });
         document.body.appendChild(reloadButton);
+    } else if (logPosition <= 0) {
+        score++;
+        document.getElementById('score').textContent = "Score: " + score;
     }
 }, 10);
 
